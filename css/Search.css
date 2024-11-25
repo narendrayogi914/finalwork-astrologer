@@ -1,0 +1,17 @@
+#searchResults li {
+    cursor: pointer;
+    padding: "2px 5px";
+    padding: 1px 8px;
+    margin-top: 6px;
+    box-shadow: 1px 0px 2px 1px #9f8d6b;
+}
+.header-lower .container{
+    height: 140px;
+}
+#searchResults{
+    z-index: 1;
+}
+#searchResults li:hover {
+    background-color: rgb(208, 204, 195);
+    transition: 1s;
+}

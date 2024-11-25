@@ -1,0 +1,50 @@
+[30-Apr-2019 05:40:43 Etc/GMT] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/mastejle/public_html/phpmailer/PHPMailerAutoload.php on line 45
+[30-Apr-2019 05:40:43 Etc/GMT] PHP Notice:  Undefined index: phone in /home/mastejle/public_html/submit_form.php on line 9
+[30-Apr-2019 05:43:17 Etc/GMT] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/mastejle/public_html/phpmailer/PHPMailerAutoload.php on line 45
+[30-Apr-2019 05:51:51 Etc/GMT] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/mastejle/public_html/phpmailer/PHPMailerAutoload.php on line 45
+[01-May-2019 03:45:33 Etc/GMT] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/mastejle/public_html/phpmailer/PHPMailerAutoload.php on line 45
+[13-Aug-2021 10:46:55 UTC] PHP Parse error:  syntax error, unexpected end of file in /home2/mastepny/public_html/submit_form.php on line 232
+[13-Aug-2021 16:19:18 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:18 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:18 Asia/Kolkata] PHP Warning:  include(): Failed opening 'PHPMailer/PHPMailerAutoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:18 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home2/mastepny/public_html/submit_form.php:186
+Stack trace:
+#0 {main}
+  thrown in /home2/mastepny/public_html/submit_form.php on line 186
+[13-Aug-2021 16:19:20 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:20 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:20 Asia/Kolkata] PHP Warning:  include(): Failed opening 'PHPMailer/PHPMailerAutoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home2/mastepny/public_html/submit_form.php:186
+Stack trace:
+#0 {main}
+  thrown in /home2/mastepny/public_html/submit_form.php on line 186
+[13-Aug-2021 16:19:20 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:20 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:20 Asia/Kolkata] PHP Warning:  include(): Failed opening 'PHPMailer/PHPMailerAutoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:20 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home2/mastepny/public_html/submit_form.php:186
+Stack trace:
+#0 {main}
+  thrown in /home2/mastepny/public_html/submit_form.php on line 186
+[13-Aug-2021 16:19:21 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:21 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:21 Asia/Kolkata] PHP Warning:  include(): Failed opening 'PHPMailer/PHPMailerAutoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:21 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home2/mastepny/public_html/submit_form.php:186
+Stack trace:
+#0 {main}
+  thrown in /home2/mastepny/public_html/submit_form.php on line 186
+[13-Aug-2021 16:19:47 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:47 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:47 Asia/Kolkata] PHP Warning:  include(): Failed opening 'PHPMailer/PHPMailerAutoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:19:47 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home2/mastepny/public_html/submit_form.php:186
+Stack trace:
+#0 {main}
+  thrown in /home2/mastepny/public_html/submit_form.php on line 186
+[13-Aug-2021 16:21:04 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:21:04 Asia/Kolkata] PHP Warning:  include(PHPMailer/PHPMailerAutoload.php): failed to open stream: No such file or directory in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:21:04 Asia/Kolkata] PHP Warning:  include(): Failed opening 'PHPMailer/PHPMailerAutoload.php' for inclusion (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home2/mastepny/public_html/submit_form.php on line 73
+[13-Aug-2021 16:21:04 Asia/Kolkata] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home2/mastepny/public_html/submit_form.php:186
+Stack trace:
+#0 {main}
+  thrown in /home2/mastepny/public_html/submit_form.php on line 186
+[07-Oct-2022 12:52:12 Asia/Kolkata] PHP Warning:  Undefined variable $name in /home2/mastepny/public_html/submit_form.php on line 143
+[07-Oct-2022 12:54:21 Asia/Kolkata] PHP Warning:  Undefined variable $name in /home2/mastepny/public_html/submit_form.php on line 143
