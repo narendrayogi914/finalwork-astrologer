@@ -264,17 +264,23 @@ function searchbarsection() {
     const elements = [home, aboutUs, astrologyServices, locations, astrologerCanada, astrologerUsa, contact];
 
 // Apply styles to all elements
-elements.forEach(element => {
-    element.style.display = 'none';  // Example: Add margin
-});
+
   let searchBox  = document.querySelector('.box')
+  if(window.innerWidth<955){
   searchBox.style.width = '300px';
     searchInput.style.width = '300px';
+  }
+    else{
+      searchBox.style.width = '550px';
+      searchInput.style.width = '550px';
+   
+    }
     searchInput.style.transition = 'width 1s ease'; 
     searchInput.style.boxShadow = '1px 1px 0 2px black'; 
 
-    // searchInput.style.width = '300px';
-    // searchInput.style.marginRight = '30px';
+    elements.forEach(element => {
+      element.style.display = 'none';  // Example: Add margin
+  });
 
   };
 
