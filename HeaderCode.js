@@ -1,6 +1,6 @@
 // Parent container for the menu
 const ul = document.querySelector('.UL');
-// alert("sddf")
+
 // Create the first level of list items
 const home = document.createElement('li');
 const aboutUs = document.createElement('li');
@@ -18,8 +18,6 @@ locations.className = "allLinks";
 astrologerCanada.className = "allLinks";
 astrologerUsa.className = "allLinks";
 contact.className = "allLinks";
-//  end here
-
 
 // Create anchor elements for each list item
 const homeLink = document.createElement('a');
@@ -65,6 +63,96 @@ ul.appendChild(locations);
 ul.appendChild(astrologerCanada);
 ul.appendChild(astrologerUsa);
 ul.appendChild(contact);
+
+// Create a new <li> element for the search bar
+const searchItem = document.createElement('li');
+searchItem.className = "search-li";  // Optional: add a class for styling
+
+// Create the search bar or search icon (example with a search icon)
+const searchIcon = document.createElement('i');
+searchIcon.className = 'fas fa-search'; // Font Awesome search icon
+
+// Optional: If you want a full search input instead of just an icon
+const searchInput = document.createElement('input');
+searchInput.type = 'text';
+searchInput.placeholder = 'Search...';
+searchInput.id = 'searchInput';
+  // Optional: add a class for styling
+  // Append the search icon/input to the <li> element
+  // searchItem.appendChild(searchInput);  // If you want just the input
+  // searchItem.appendChild(searchIcon);
+  // searchItem.appendChild(searchIcon);  // Uncomment this line if you want the icon instead
+  
+  const searchResults = document.createElement('ul');
+  searchResults.id = 'searchResults';
+  searchResults.className = 'list-group';
+  
+  adjustSearchPosition();
+// Append the <ul> inside the <li> element
+
+
+// Append the search item to the main <ul>
+
+
+
+
+function adjustSearchPosition() {
+  const stellarnav = document.querySelector('.stellarnav');
+  
+  
+  
+  if (window.innerWidth < 955) {
+    // Move search item outside of the .UL but inside the .stellarnav
+    stellarnav.insertBefore(searchItem, ul);
+    // This will place it above or below the .UL based on flexbox settings
+    
+    searchItem.appendChild(searchIcon);
+    
+  searchIcon.onclick=() => {
+      // alert("sdfg")
+      searchItem.appendChild(searchInput);
+      searchItem.appendChild(searchResults);
+    searchResults.style.margin='auto'
+      searchIcon.style.display = 'none'; // Initially, show the icon
+    searchInput.style.display ='block'
+      searchInput.style.width = '350px'; // Initially, the input field is hidden
+searchInput.style.transition = 'width 0.5s ease'; // Add transition for the width of the input
+
+    }
+  
+  } 
+  else{
+    ul.appendChild(searchItem);
+    
+  searchItem.appendChild(searchIcon);
+    
+  searchIcon.onclick=() => {
+      // alert("sdfg")
+      searchItem.appendChild(searchInput);
+      searchItem.appendChild(searchResults);
+
+      searchIcon.style.display = 'none'; // Initially, show the icon
+      searchInput.style.display ='block'
+searchInput.style.width = '350px'; // Initially, the input field is hidden
+searchInput.style.transition = 'width 0.5s ease'; // Add transition for the width of the input
+// searchIcon.style.display ='inline-block'
+    }
+  }
+
+  // Move the search item back inside the menu (UL)
+  
+
+}
+
+// Call the function initially to set the correct position
+
+
+// Add an event listener to handle window resize
+window.addEventListener('resize', adjustSearchPosition);
+
+
+
+
 
 // Create nested ul for Astrology Services
 const astrologyServicesUl = document.createElement('ul');
@@ -201,8 +289,8 @@ searchbarsection();
 
 
 function searchbarsection() {
-  const searchInput = document.getElementById('searchInput');
-  const searchResults = document.getElementById('searchResults');
+  // const searchInput = document.getElementById('searchInput');
+  // const searchResults = document.getElementById('searchResults');
 
   // Sample data for suggestions (with image URLs and titles)
   const suggestions = [
@@ -286,7 +374,12 @@ function searchbarsection() {
 
 
   searchInput.addEventListener("blur", () => {
+    // alert('fdg')
+    searchResults.innerHTML = '';
+    searchInput.value = '';
+    searchInput.style.display = 'none'
 
+    searchIcon.style.display = 'inline-block'
     const elements = [home, aboutUs, astrologyServices, locations, astrologerCanada, astrologerUsa, contact];
 
     // Check screen width and set display accordingly
@@ -309,8 +402,6 @@ function searchbarsection() {
 
 
       setTimeout(() => {
-        searchResults.innerHTML = '';
-        searchInput.value = '';
             document.querySelector('i').style.display = 'block'
       }, 500); // Delay to allow clicking on an item
   });
@@ -379,5 +470,9 @@ function searchbarsection() {
     window.location.href = tg;
   } 
   
+
+
+
+
 
 

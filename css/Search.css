@@ -6,8 +6,15 @@
  
 a{
     text-decoration: none  !important;
-    color: blue;
+    /* color: blue; */
  }
+ a:hover{
+    text-decoration: underline !important;
+ }
+ #searchItem {
+    display: inline-block;  /* Ensure the search item stays inline */
+    margin-left: 15px;  /* Optional: add some space between the last menu item and the search item */
+  }
 
 #searchResults li {
     cursor: pointer;
@@ -17,18 +24,45 @@ a{
     margin-top: 6px;
     margin-bottom: 6px;
     font-size: 15px;
+    display: flex;
+    width: auto;
 }
 
 
 #searchResults{
+    margin-top:15%;
+    height: auto;
     z-index: 1;
 }
+#searchResults li span{
+    font-size: 10px;
+    width: 80%;
+    text-align: justify;
+}
+
+
 #searchResults li:hover {
     background-color: rgb(208, 204, 195);
     transition: 1s;
 }
+#searchInput {
+    border-radius: 5px;
+    padding: 5px;
+    border: navajowhite;
+    box-shadow: 0px 1px 3px 1px #933012;
+}
+.fa-search{
+    margin-left: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    color: yellow;
+    transition: 1s;
 
+}
 
+.fa-search:hover{
+    transform: scale(1.2);
+}
 
 
 
@@ -59,10 +93,7 @@ a{
     transition: 1s;
 }  */
 
-.extended-search {
-    width: 300px; /* Adjust width as needed */
-    transition: width 0.3s ease; /* Smooth animation */
-}
+
 
   
 
@@ -80,4 +111,7 @@ a{
     opacity: 0;
     z-index: -1;
 }
+
+
+
 
