@@ -346,6 +346,7 @@ function searchbarsection() {
 
   searchInput.addEventListener('focus', () => {
     ShowSomeDefaultItem();
+    alert("hello")
 });
 
 
