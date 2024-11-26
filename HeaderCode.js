@@ -187,6 +187,8 @@ usaItems.forEach(item => {
 
   
 searchbarsection();
+
+
 function searchbarsection() {
   const searchInput = document.getElementById('searchInput');
   const searchResults = document.getElementById('searchResults');
@@ -246,12 +248,15 @@ function searchbarsection() {
   searchInput.onfocus = () => {
     // alert("ss") 
     ShowSomeDefaultItem()
+    document.querySelector('i').style.display = 'none'
  
   };
 
   searchInput.addEventListener("blur", () => {
       setTimeout(() => {
-          searchResults.innerHTML = '';
+        searchResults.innerHTML = '';
+        searchInput.value = '';
+            document.querySelector('i').style.display = 'block'
       }, 500); // Delay to allow clicking on an item
   });
 
