@@ -345,8 +345,10 @@ function searchbarsection() {
   }
 
   searchInput.addEventListener('focus', () => {
-    ShowSomeDefaultItem();
-    alert("hello")
+    if (!searchInput.classList.contains('focused')) {
+        searchInput.classList.add('focused');
+        ShowSomeDefaultItem();
+    }
 });
 
 
