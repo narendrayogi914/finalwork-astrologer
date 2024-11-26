@@ -344,33 +344,9 @@ function searchbarsection() {
       });
   }
 
-  searchInput.onfocus = () => {
+  searchInput.addEventListener('focus', () => {
     ShowSomeDefaultItem();
-    document.querySelector('i').style.display = 'none';
-
-    // Apply styles for extending the search bar
-    const elements = [home, aboutUs, astrologyServices, locations, astrologerCanada, astrologerUsa, contact];
-
-// Apply styles to all elements
-
-  let searchBox  = document.querySelector('.box')
-  if(window.innerWidth<955){
-  searchBox.style.width = '300px';
-    searchInput.style.width = '300px';
-  }
-    else{
-      searchBox.style.width = '550px';
-      searchInput.style.width = '550px';
-   
-    }
-    searchInput.style.transition = 'width 1s ease'; 
-    searchInput.style.boxShadow = '1px 1px 0 2px black'; 
-
-    elements.forEach(element => {
-      element.style.display = 'none';  // Example: Add margin
-  });
-
-  };
+});
 
 
   searchInput.addEventListener("blur", () => {
@@ -380,34 +356,11 @@ function searchbarsection() {
     searchInput.style.display = 'none'
 
     searchIcon.style.display = 'inline-block'
-    const elements = [home, aboutUs, astrologyServices, locations, astrologerCanada, astrologerUsa, contact];
 
-    // Check screen width and set display accordingly
-    if (window.innerWidth < 955) {
-        // Set display to block if screen width is less than 955px
-        elements.forEach(element => {
-            element.style.display = 'block';
-        });
-    } else {
-        // Otherwise, align horizontally (inline-block or flex)
-        elements.forEach(element => {
-            element.style.display = 'inline-block'; // Horizontal layout
-        });
-    }
-
-    let searchBox = document.querySelector('.box');
-    searchBox.style.width = '100px'; // Reset to original width
-
-    searchInput.style.width = '100px'; // Reset search input width
-
-
-      setTimeout(() => {
-            document.querySelector('i').style.display = 'block'
-      }, 500); // Delay to allow clicking on an item
   });
 
   searchInput.addEventListener('input', () => {
-    console.log(searchInput.value);
+    // console.log(searchInput.value);
     
     const query = searchInput.value.toLowerCase();
     const filteredSuggestions = suggestions.filter(suggestion => suggestion.title.toLowerCase().startsWith(query));
