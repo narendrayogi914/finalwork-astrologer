@@ -10,6 +10,17 @@ const astrologerCanada = document.createElement('li');
 const astrologerUsa = document.createElement('li');
 const contact = document.createElement('li');
 
+// add class name for all 
+home.className = "allLinks";
+aboutUs.className = "allLinks";
+astrologyServices.className = "allLinks";
+locations.className = "allLinks";
+astrologerCanada.className = "allLinks";
+astrologerUsa.className = "allLinks";
+contact.className = "allLinks";
+//  end here
+
+
 // Create anchor elements for each list item
 const homeLink = document.createElement('a');
 homeLink.href = 'index.html';
@@ -201,7 +212,7 @@ function searchbarsection() {
       { url: 'https://mastervijayram.blogspot.com/2023/07/Expert%20Astrologer%20in%20North%20York.html', title: 'Astrology services north-york', image: 'https://via.placeholder.com/50' },
       { url: 'https://mastervijayram.blogspot.com/2022/10/black-magic-removal-specialist-services.html', title: 'Black magic', image: 'https://via.placeholder.com/50' },
   ];
-
+  
   // Initially hide the search results
   searchResults.style.display = 'none';
     
@@ -246,13 +257,51 @@ function searchbarsection() {
   }
 
   searchInput.onfocus = () => {
-    // alert("ss") 
-    ShowSomeDefaultItem()
-    document.querySelector('i').style.display = 'none'
- 
+    ShowSomeDefaultItem();
+    document.querySelector('i').style.display = 'none';
+
+    // Apply styles for extending the search bar
+    const elements = [home, aboutUs, astrologyServices, locations, astrologerCanada, astrologerUsa, contact];
+
+// Apply styles to all elements
+elements.forEach(element => {
+    element.style.display = 'none';  // Example: Add margin
+});
+  let searchBox  = document.querySelector('.box')
+  searchBox.style.width = '300px';
+    searchInput.style.width = '300px';
+    searchInput.style.transition = 'width 1s ease'; 
+    searchInput.style.boxShadow = '1px 1px 0 2px black'; 
+
+    // searchInput.style.width = '300px';
+    // searchInput.style.marginRight = '30px';
+
   };
 
+
   searchInput.addEventListener("blur", () => {
+
+    const elements = [home, aboutUs, astrologyServices, locations, astrologerCanada, astrologerUsa, contact];
+
+    // Check screen width and set display accordingly
+    if (window.innerWidth < 955) {
+        // Set display to block if screen width is less than 955px
+        elements.forEach(element => {
+            element.style.display = 'block';
+        });
+    } else {
+        // Otherwise, align horizontally (inline-block or flex)
+        elements.forEach(element => {
+            element.style.display = 'inline-block'; // Horizontal layout
+        });
+    }
+
+    let searchBox = document.querySelector('.box');
+    searchBox.style.width = '100px'; // Reset to original width
+
+    searchInput.style.width = '100px'; // Reset search input width
+
+
       setTimeout(() => {
         searchResults.innerHTML = '';
         searchInput.value = '';
@@ -304,6 +353,11 @@ function searchbarsection() {
         console.log("empty")
         ShowSomeDefaultItem();
       }
+
+
+
+
+
      
       
   });

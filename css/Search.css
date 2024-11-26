@@ -1,3 +1,9 @@
+
+/* .allLinks a{
+    background-color:  yellow;
+    display: none !important;
+} */
+
 #searchResults li {
     cursor: pointer;
     padding: "2px 5px";
@@ -42,16 +48,19 @@
     font-size: 26px;
     transition: .5s;
 }
-.box:hover input{
-    width: 100px;
-
-    height: 40px;
-    padding: 1%;
-    box-shadow: 1px 1px 0 1px black;
-    /* background: #3b3640; */
-    border-radius: 10px;
+/* .box:hover .input{
+    background-color: red;
+    margin-right:50px ;
     transition: 1s;
+}  */
+
+.extended-search {
+    width: 300px; /* Adjust width as needed */
+    transition: width 0.3s ease; /* Smooth animation */
 }
+
+  
+
 
 .box i{
     position: absolute;
