@@ -2,12 +2,13 @@
     cursor: pointer;
     padding: "2px 5px";
     padding: 1px 8px;
-    margin-top: 6px;
     box-shadow: 1px 0px 2px 1px #9f8d6b;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    font-size: 15px;
 }
-.header-lower .container{
-    height: 140px;
-}
+
+
 #searchResults{
     z-index: 1;
 }
