@@ -3,6 +3,11 @@
     background-color:  yellow;
     display: none !important;
 } */
+ 
+a{
+    text-decoration: none  !important;
+    color: blue;
+ }
 
 #searchResults li {
     cursor: pointer;
