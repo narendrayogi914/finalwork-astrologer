@@ -105,7 +105,8 @@ function adjustSearchPosition() {
     // Move search item outside of the .UL but inside the .stellarnav
     let menu_toggle =  document.querySelector('.menu-toggle');
     // stellarnav.insertBefore(searchItem, ul);
-    stellarnav.insertBefore(searchItem, stellarnav.firstChild);
+    ul.insertBefore(searchItem , ul.firstChild)
+    // stellarnav.insertBefore(searchItem, stellarnav.firstChild);
     // This will place it above or below the .UL based on flexbox settings
     
     searchItem.appendChild(searchInput);
