@@ -345,13 +345,23 @@ function searchbarsection() {
   }
 
   
-searchInput.addEventListener('focus', () => {
-  isFocused = true;
-  searchInput.style.display = 'block'; // Ensure input stays visible
-  searchIcon.style.display = 'none'; // Hide icon
-  ShowSomeDefaultItem(); // Show default items
-  document.querySelector('#searchResults').style.display = 'block'; // Keep results visible
-});
+  let isFocused = false;
+
+  // Focus event for input
+  searchInput.addEventListener('focus', () => {
+      isFocused = true;
+  
+      // Show input and hide the search icon
+      searchInput.style.display = 'block';
+      searchIcon.style.display = 'none';
+  
+      // Show default items
+      // ShowSomeDefaultItem();
+      document.querySelector('#searchResults').style.display = 'block';
+  
+      // Additional adjustments for mobile
+      
+  });
 
 
   searchInput.addEventListener("blur", () => {
@@ -366,6 +376,11 @@ searchInput.addEventListener('focus', () => {
 
   searchInput.addEventListener('input', () => {
     // console.log(searchInput.value);
+
+    if (isFocused) {
+      ShowSomeDefaultItem();
+
+  }
     
     const query = searchInput.value.toLowerCase();
     const filteredSuggestions = suggestions.filter(suggestion => suggestion.title.toLowerCase().startsWith(query));
