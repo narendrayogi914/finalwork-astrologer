@@ -78,7 +78,7 @@ a{
 height: auto;
 }
 
-@media (max-width: 1121px) {
+@media (max-width: 1200px) {
     .header-lawer-content {
         display: flex !important; /* Show input on mobile */
         justify-content: center !important;
