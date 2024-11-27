@@ -372,7 +372,7 @@ function searchbarsection() {
   searchInput.addEventListener("blur", () => {
 
 
-      
+
 
     setTimeout(() => {
         // Clear search results and reset input value
@@ -389,7 +389,7 @@ function searchbarsection() {
 
         // Always show the search icon
         searchIcon.style.display = 'inline-block';
-    }, 200); // Add a slight delay to allow interaction with results
+    }, 2000); // Add a slight delay to allow interaction with results
 });
 
 
