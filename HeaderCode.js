@@ -104,27 +104,27 @@ function adjustSearchPosition() {
   if (window.innerWidth < 955) {
     // Move search item outside of the .UL but inside the .stellarnav
     let menu_toggle =  document.querySelector('.menu-toggle');
-    // stellarnav.insertBefore(searchItem, ul);
-    ul.insertBefore(searchItem , ul.firstChild)
+    stellarnav.insertBefore(searchItem, ul);
+    // ul.insertBefore(searchItem , ul.firstChild)
     // stellarnav.insertBefore(searchItem, stellarnav.firstChild);
     // This will place it above or below the .UL based on flexbox settings
     
-    searchItem.appendChild(searchInput);
-    searchItem.appendChild(searchResults);
+    searchItem.appendChild(searchIcon);
+    // searchItem.appendChild(searchResults);
     searchResults.style.margin='auto'
 //     searchItem.appendChild(searchIcon);
     
-//   searchIcon.onclick=() => {
-//       // alert("sdfg")
-//       searchItem.appendChild(searchInput);
-//       searchItem.appendChild(searchResults);
-//     searchResults.style.margin='auto'
-//       searchIcon.style.display = 'none'; // Initially, show the icon
-//     searchInput.style.display ='block'
-//       searchInput.style.width = '350px'; // Initially, the input field is hidden
-// searchInput.style.transition = 'width 0.5s ease'; // Add transition for the width of the input
+  searchIcon.onclick=() => {
+      // alert("sdfg")
+      searchItem.appendChild(searchInput);
+      searchItem.appendChild(searchResults);
+    searchResults.style.margin='auto'
+      searchIcon.style.display = 'none'; // Initially, show the icon
+    searchInput.style.display ='block'
+      searchInput.style.width = '350px'; // Initially, the input field is hidden
+searchInput.style.transition = 'width 0.5s ease'; // Add transition for the width of the input
 
-//     }
+    }
   
   } 
   else{
@@ -375,25 +375,14 @@ function searchbarsection() {
 
 
 searchInput.addEventListener('blur', (event) => {
-    if (window.innerWidth < 955) {
-        // Do nothing if the width is less than 955px
-        return;
-    }
 
     setTimeout(() => {
         // Clear search results and reset input value
         searchResults.innerHTML = '';
         searchInput.value = '';
-
-        if (window.innerWidth < 955) {
-            // Keep the input visible on mobile
-
-            searchInput.style.display = 'block';
-          
-        } else {
             // Hide the input on larger screens
             searchInput.style.display = 'none';
-        }
+        
 
         // Always show the search icon
         searchIcon.style.display = 'inline-block';

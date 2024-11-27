@@ -16,7 +16,7 @@ a{
     margin-left: 15px;  /* Optional: add some space between the last menu item and the search item */
   }
   .search-li{
-    text-align: start;
+    text-align: end;
   }
 
 #searchResults li {
@@ -35,6 +35,7 @@ a{
 #searchResults{
     margin-top:10%;
     height: auto;
+    
     z-index: 1;
 }
 #searchResults li span{
@@ -60,7 +61,7 @@ a{
     margin-left: 5px;
     font-size: 30px;
     cursor: pointer;
-    color: yellow;
+    color:black;
     transition: 1s;
 
 }
@@ -69,13 +70,58 @@ a{
     transform: scale(1.2);
 }
 
+.header-lower {
+height: auto;
+}
 
-
+@media (max-width: 1121px) {
+    .header-lawer-content {
+        display: flex !important; /* Show input on mobile */
+        justify-content: center !important;
+    }
+    .UL{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .UL li{
+        padding: 0 15px;
+    }
+}
 
 
 @media (max-width: 955px) {
+    .header-lower {
+        height: 150px;
+        }
     #searchInput {
         display: block; /* Show input on mobile */
+    }
+    .UL{
+        display: block;
+    }
+    .header-lawer-content {
+        display: block !important; /* Show input on mobile */
+        /* justify-content: center !important; */
+    }
+    .search-li{
+        text-align: center !important;
+        /* padding: 0 10% !important; */
+    }
+    .search-li input{
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 795px) {
+    .search-li{
+        text-align: end !important;
+        padding: 0 10% !important;
+    }
+    .search-li input{
+        width: 100% !important;
+        padding: 1% 0 !important;
+        /* padding: 0 10% !important; */
     }
 }
 
