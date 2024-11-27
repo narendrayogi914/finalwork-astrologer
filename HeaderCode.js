@@ -347,6 +347,7 @@ function searchbarsection() {
   searchInput.addEventListener('focus', () => {
     if (!searchInput.classList.contains('focused')) {
         searchInput.classList.add('focused');
+        searchInput.style.display = 'block';
         ShowSomeDefaultItem();
     }
 });
@@ -367,7 +368,7 @@ function searchbarsection() {
     
     const query = searchInput.value.toLowerCase();
     const filteredSuggestions = suggestions.filter(suggestion => suggestion.title.toLowerCase().startsWith(query));
-     
+    
       if (filteredSuggestions.length > 0) {
           searchResults.style.display = 'block';
           searchResults.innerHTML = '';
