@@ -94,10 +94,10 @@ searchInput.id = 'searchInput';
 // Append the search item to the main <ul>
 
 
-searchInput.addEventListener('touchstart', (e) => {
-  e.preventDefault();
-  e.target.focus();
-});
+// searchInput.addEventListener('touchstart', (e) => {
+//   e.preventDefault();
+//   e.target.focus();
+// });
 
 
 
