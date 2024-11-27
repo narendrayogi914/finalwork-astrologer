@@ -380,9 +380,7 @@ function searchbarsection() {
 
 // searchInput.addEventListener('blur', (event) => {
 
-//  if(window.innerWidth<955){
-//   return;
-//  }
+
 
 //     setTimeout(() => {
 //         // Clear search results and reset input value
