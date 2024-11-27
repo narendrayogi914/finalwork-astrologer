@@ -102,8 +102,8 @@ function adjustSearchPosition() {
   
   
   if (window.innerWidth < 955) {
-    // Move search item outside of the .UL but inside the .stellarnav
-    let menu_toggle =  document.querySelector('.menu-toggle');
+
+    
     stellarnav.insertBefore(searchItem, ul);
     // ul.insertBefore(searchItem , ul.firstChild)
     // stellarnav.insertBefore(searchItem, stellarnav.firstChild);

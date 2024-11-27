@@ -56,6 +56,10 @@ a{
     padding: 5px;
     border: navajowhite;
     box-shadow: 0px 1px 3px 1px #933012;
+    
+        min-height: 44px; /* Minimum recommended for touch */
+    
+    
 }
 .fa-search{
     margin-left: 5px;
