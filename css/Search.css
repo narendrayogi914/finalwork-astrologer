@@ -33,7 +33,7 @@ a{
 
 
 #searchResults{
-    margin-top:15%;
+    margin-top:10%;
     height: auto;
     z-index: 1;
 }
@@ -72,50 +72,6 @@ a{
 
 
 
-  /* search icon css */
-
-.box{
-    position: relative;
-    width: 100px;
-}
-
-
-.input {
-    padding: 10px;
-    /* width: 20px; */
-    height: 50px;
- 
-
-    border-radius: 50px;
-    box-sizing: border-box;
-    font-family: Comic Sans MS;
-    font-size: 26px;
-    transition: .5s;
-}
-/* .box:hover .input{
-    background-color: red;
-    margin-right:50px ;
-    transition: 1s;
-}  */
-
-
-
-  
-
-
-.box i{
-    position: absolute;
-    top: 50%;
-    right: 50px;
-    transform: translate(-50%,-50%);
-    font-size: 26px;
-    color: #514f49;
-    transition: .2s;
-}
-.box:hover i{
-    opacity: 0;
-    z-index: -1;
-}
 
 
 

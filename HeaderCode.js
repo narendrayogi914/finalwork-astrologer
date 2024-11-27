@@ -345,7 +345,6 @@ function searchbarsection() {
   }
 
   
-  let isFocused = false;
 
   // Focus event for input
   searchInput.addEventListener('focus', () => {
@@ -435,7 +434,7 @@ function searchbarsection() {
 }  
 
 
-
+  
 
   function gotoBlog(tg) {
     // alert("you are redirecting to latest blogs..."+tg );
