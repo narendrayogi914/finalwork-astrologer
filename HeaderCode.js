@@ -373,6 +373,12 @@ function searchbarsection() {
 
   searchInput.addEventListener("blur", () => {
 
+  if (window.innerWidth < 955) {
+        // Disable blur functionality for mobile
+        searchInput.focus(); // Immediately regain focus
+        return;
+    }
+
     setTimeout(() => {
         // Clear search results and reset input value
         searchResults.innerHTML = '';
