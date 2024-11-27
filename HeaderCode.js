@@ -358,25 +358,19 @@ function searchbarsection() {
 
   // Focus event for input
   searchInput.addEventListener('focus', () => {
-  
-     
-    // Show default items
-    document.querySelector('#searchResults').style.display = 'block';
-    if(window.innerWidth<955){
-      
-      // Show input and hide the search icon
-      
-      ShowSomeDefaultItem();
-      searchInput.style.display = 'block';
-      searchIcon.style.display = 'none';
-    }  
-    else{
-      ShowSomeDefaultItem();
-    }
-      // Additional adjustments for mobile
-      
+    setTimeout(() => {
+      // Show default items
+      document.querySelector('#searchResults').style.display = 'block';
+      if (window.innerWidth < 955) {
+        // Show input and hide the search icon
+        ShowSomeDefaultItem();
+        searchInput.style.display = 'block';
+        searchIcon.style.display = 'none';
+      } else {
+        ShowSomeDefaultItem();
+      }
+    }, 0); // Set timeout to 0 for minimal delay
   });
-
 
 // searchInput.addEventListener('blur', (event) => {
 
