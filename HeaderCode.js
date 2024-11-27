@@ -351,14 +351,17 @@ function searchbarsection() {
   searchInput.addEventListener('focus', () => {
       isFocused = true;
   
-      // Show input and hide the search icon
-      searchInput.style.display = 'block';
-      searchIcon.style.display = 'none';
   
       // Show default items
-      // ShowSomeDefaultItem();
+      ShowSomeDefaultItem();
       document.querySelector('#searchResults').style.display = 'block';
-  
+    if(window.innerWidth<955){
+      
+      // Show input and hide the search icon
+
+      searchInput.style.display = 'block';
+      searchIcon.style.display = 'none';
+    }  
       // Additional adjustments for mobile
       
   });
@@ -377,10 +380,7 @@ function searchbarsection() {
   searchInput.addEventListener('input', () => {
     // console.log(searchInput.value);
 
-    if (isFocused) {
-      ShowSomeDefaultItem();
-
-  }
+   
     
     const query = searchInput.value.toLowerCase();
     const filteredSuggestions = suggestions.filter(suggestion => suggestion.title.toLowerCase().startsWith(query));
