@@ -354,7 +354,6 @@ function searchbarsection() {
 
   // Focus event for input
   searchInput.addEventListener('focus', () => {
-      isFocused = true;
   
   
       // Show default items
@@ -392,6 +391,11 @@ function searchbarsection() {
         // Always show the search icon
         searchIcon.style.display = 'inline-block';
     }, 200); // Add a slight delay to allow interaction with results
+});
+
+   
+window.addEventListener('resize', () => {
+  adjustSearchPosition();
 });
 
 

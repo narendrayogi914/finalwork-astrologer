@@ -73,6 +73,10 @@ a{
 
 
 
-
+@media (max-width: 955px) {
+    #searchInput {
+        display: block; /* Show input on mobile */
+    }
+}
 
 
