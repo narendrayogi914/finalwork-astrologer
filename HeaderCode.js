@@ -370,24 +370,28 @@ function searchbarsection() {
 
 
   searchInput.addEventListener("blur", () => {
-    // alert('fdg')
 
-    
 
-    searchResults.innerHTML = '';
-    searchInput.value = '';
       
-if(window.innerWidth<955){
-       searchInput.style.display ='block'
 
-}
-else{
+    setTimeout(() => {
+        // Clear search results and reset input value
+        searchResults.innerHTML = '';
+        searchInput.value = '';
 
-    searchInput.style.display = 'none'
-}
-    searchIcon.style.display = 'inline-block'
+        if (window.innerWidth < 955) {
+            // Keep the input visible on mobile
+            searchInput.style.display = 'block';
+        } else {
+            // Hide the input on larger screens
+            searchInput.style.display = 'none';
+        }
 
-  });
+        // Always show the search icon
+        searchIcon.style.display = 'inline-block';
+    }, 200); // Add a slight delay to allow interaction with results
+});
+
 
   searchInput.addEventListener('input', () => {
     // console.log(searchInput.value);
