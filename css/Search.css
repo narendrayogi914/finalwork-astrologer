@@ -15,6 +15,9 @@ a{
     display: inline-block;  /* Ensure the search item stays inline */
     margin-left: 15px;  /* Optional: add some space between the last menu item and the search item */
   }
+  .search-li{
+    text-align: start;
+  }
 
 #searchResults li {
     cursor: pointer;
