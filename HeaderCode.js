@@ -106,19 +106,22 @@ function adjustSearchPosition() {
     stellarnav.insertBefore(searchItem, ul);
     // This will place it above or below the .UL based on flexbox settings
     
-    searchItem.appendChild(searchIcon);
-    
-  searchIcon.onclick=() => {
-      // alert("sdfg")
-      searchItem.appendChild(searchInput);
-      searchItem.appendChild(searchResults);
+    searchItem.appendChild(searchInput);
+    searchItem.appendChild(searchResults);
     searchResults.style.margin='auto'
-      searchIcon.style.display = 'none'; // Initially, show the icon
-    searchInput.style.display ='block'
-      searchInput.style.width = '350px'; // Initially, the input field is hidden
-searchInput.style.transition = 'width 0.5s ease'; // Add transition for the width of the input
+//     searchItem.appendChild(searchIcon);
+    
+//   searchIcon.onclick=() => {
+//       // alert("sdfg")
+//       searchItem.appendChild(searchInput);
+//       searchItem.appendChild(searchResults);
+//     searchResults.style.margin='auto'
+//       searchIcon.style.display = 'none'; // Initially, show the icon
+//     searchInput.style.display ='block'
+//       searchInput.style.width = '350px'; // Initially, the input field is hidden
+// searchInput.style.transition = 'width 0.5s ease'; // Add transition for the width of the input
 
-    }
+//     }
   
   } 
   else{
@@ -368,10 +371,20 @@ function searchbarsection() {
 
   searchInput.addEventListener("blur", () => {
     // alert('fdg')
+
+    
+
     searchResults.innerHTML = '';
     searchInput.value = '';
-    searchInput.style.display = 'none'
+      
+if(window.innerWidth<955){
+       searchInput.style.display ='block'
 
+}
+else{
+
+    searchInput.style.display = 'none'
+}
     searchIcon.style.display = 'inline-block'
 
   });
@@ -448,3 +461,6 @@ function searchbarsection() {
 
 
 
+
+
+  
