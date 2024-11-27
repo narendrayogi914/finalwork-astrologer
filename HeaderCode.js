@@ -369,28 +369,27 @@ function searchbarsection() {
   });
 
 
-  searchInput.addEventListener("blur", () => {
+//   searchInput.addEventListener("blur", () => {
 
+//     setTimeout(() => {
+//         // Clear search results and reset input value
+//         searchResults.innerHTML = '';
+//         searchInput.value = '';
 
+//         if (window.innerWidth < 955) {
+//             // Keep the input visible on mobile
 
+//             searchInput.style.display = 'block';
+          
+//         } else {
+//             // Hide the input on larger screens
+//             searchInput.style.display = 'none';
+//         }
 
-    setTimeout(() => {
-        // Clear search results and reset input value
-        searchResults.innerHTML = '';
-        searchInput.value = '';
-
-        if (window.innerWidth < 955) {
-            // Keep the input visible on mobile
-            searchInput.style.display = 'block';
-        } else {
-            // Hide the input on larger screens
-            searchInput.style.display = 'none';
-        }
-
-        // Always show the search icon
-        searchIcon.style.display = 'inline-block';
-    }, 2000); // Add a slight delay to allow interaction with results
-});
+//         // Always show the search icon
+//         searchIcon.style.display = 'inline-block';
+//     }, 2000); // Add a slight delay to allow interaction with results
+// });
 
 
   searchInput.addEventListener('input', () => {
