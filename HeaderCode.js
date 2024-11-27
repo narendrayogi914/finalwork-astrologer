@@ -94,10 +94,7 @@ searchInput.id = 'searchInput';
 // Append the search item to the main <ul>
 
 
-// searchInput.addEventListener('touchstart', (e) => {
-//   e.preventDefault();
-//   e.target.focus();
-// });
+
 
 
 
@@ -383,10 +380,9 @@ function searchbarsection() {
 
 searchInput.addEventListener('blur', (event) => {
 
-  if(window.innerWidth<955){   
-
-  e.stopPropagation();
-}
+ if(window.innerWidth<955){
+  return;
+ }
 
     setTimeout(() => {
         // Clear search results and reset input value
