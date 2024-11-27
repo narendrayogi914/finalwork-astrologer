@@ -98,56 +98,31 @@ searchInput.id = 'searchInput';
 
 function adjustSearchPosition() {
   const stellarnav = document.querySelector('.stellarnav');
-  
-  
-  
+
   if (window.innerWidth < 955) {
-    // Move search item outside of the .UL but inside the .stellarnav
-    let menu_toggle =  document.querySelector('.menu-toggle');
-    // stellarnav.insertBefore(searchItem, ul);
-    ul.insertBefore(searchItem , ul.firstChild)
-    // stellarnav.insertBefore(searchItem, stellarnav.firstChild);
-    // This will place it above or below the .UL based on flexbox settings
-    
+    // Move search item to first in the menu for mobile
+    ul.insertBefore(searchItem, ul.firstChild);
+
     searchItem.appendChild(searchInput);
     searchItem.appendChild(searchResults);
-    searchResults.style.margin='auto'
-//     searchItem.appendChild(searchIcon);
-    
-//   searchIcon.onclick=() => {
-//       // alert("sdfg")
-//       searchItem.appendChild(searchInput);
-//       searchItem.appendChild(searchResults);
-//     searchResults.style.margin='auto'
-//       searchIcon.style.display = 'none'; // Initially, show the icon
-//     searchInput.style.display ='block'
-//       searchInput.style.width = '350px'; // Initially, the input field is hidden
-// searchInput.style.transition = 'width 0.5s ease'; // Add transition for the width of the input
-
-//     }
-  
-  } 
-  else{
+    searchResults.style.margin = 'auto';
+  } else {
+    // Move search item back to the end for desktop
     ul.appendChild(searchItem);
-    
-  searchItem.appendChild(searchIcon);
-    
-  searchIcon.onclick=() => {
-      // alert("sdfg")
+
+    searchItem.appendChild(searchIcon);
+
+    searchIcon.onclick = () => {
       searchItem.appendChild(searchInput);
       searchItem.appendChild(searchResults);
+      searchInput.style.display = 'block';
+      searchInput.style.width = '350px';
+      searchInput.style.transition = 'width 0.5s ease';
 
-      searchIcon.style.display = 'none'; // Initially, show the icon
-      searchInput.style.display ='block'
-searchInput.style.width = '350px'; // Initially, the input field is hidden
-searchInput.style.transition = 'width 0.5s ease'; // Add transition for the width of the input
-// searchIcon.style.display ='inline-block'
-    }
+      // Focus on the input when it's displayed
+      searchInput.focus();
+    };
   }
-
-  // Move the search item back inside the menu (UL)
-  
-
 }
 
 // Call the function initially to set the correct position
@@ -352,58 +327,24 @@ function searchbarsection() {
 
   
 
-  // Focus event for input
-  searchInput.addEventListener('focus', () => {
-  
-  
-    // Show default items
-    document.querySelector('#searchResults').style.display = 'block';
-    if(window.innerWidth<955){
-      
-      // Show input and hide the search icon
-      
-      ShowSomeDefaultItem();
-      searchInput.style.display = 'block';
-      searchIcon.style.display = 'none';
-    }  
-    else{
-      ShowSomeDefaultItem();
-    }
-      // Additional adjustments for mobile
-      
-  });
 
-
-  searchInput.addEventListener('blur', (event) => {
-    if (window.innerWidth < 955) {
-        // Do nothing if the width is less than 955px
-        return;
-    }
-
-    setTimeout(() => {
-        // Clear search results and reset input value
-        searchResults.innerHTML = '';
-        searchInput.value = '';
-
-        if (window.innerWidth < 955) {
-            // Keep the input visible on mobile
-
-            searchInput.style.display = 'block';
-          
-        } else {
-            // Hide the input on larger screens
-            searchInput.style.display = 'none';
-        }
-
-        // Always show the search icon
-        searchIcon.style.display = 'inline-block';
-    }, 200); // Add a slight delay to allow interaction with results
+// Keep focus on the input when tapped
+searchInput.addEventListener('focus', () => {
+  searchInput.style.width = '350px'; // Ensure input expands correctly
 });
 
-   
-window.addEventListener('resize', () => {
-  adjustSearchPosition();
+// Prevent blur due to re-rendering
+searchInput.addEventListener('blur', (e) => {
+  setTimeout(() => {
+    searchInput.style.display = 'none'; // Optionally hide input if required
+    searchIcon.style.display = 'block'; // Show icon back
+  }, 300); // Delay to avoid immediate hide
 });
+
+// Initial call and resize listener
+adjustSearchPosition();
+window.addEventListener('resize', adjustSearchPosition);
+
 
 
   searchInput.addEventListener('input', () => {
