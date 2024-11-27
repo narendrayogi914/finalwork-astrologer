@@ -103,7 +103,9 @@ function adjustSearchPosition() {
   
   if (window.innerWidth < 955) {
     // Move search item outside of the .UL but inside the .stellarnav
-    stellarnav.insertBefore(searchItem, ul);
+    let menu_toggle =  document.querySelector('.menu-toggle');
+    // stellarnav.insertBefore(searchItem, ul);
+    stellarnav.insertBefore(searchItem, stellarnav.firstChild);
     // This will place it above or below the .UL based on flexbox settings
     
     searchItem.appendChild(searchInput);
@@ -369,27 +371,27 @@ function searchbarsection() {
   });
 
 
-//   searchInput.addEventListener("blur", () => {
+  searchInput.addEventListener("blur", () => {
 
-//     setTimeout(() => {
-//         // Clear search results and reset input value
-//         searchResults.innerHTML = '';
-//         searchInput.value = '';
+    setTimeout(() => {
+        // Clear search results and reset input value
+        searchResults.innerHTML = '';
+        searchInput.value = '';
 
-//         if (window.innerWidth < 955) {
-//             // Keep the input visible on mobile
+        if (window.innerWidth < 955) {
+            // Keep the input visible on mobile
 
-//             searchInput.style.display = 'block';
+            searchInput.style.display = 'block';
           
-//         } else {
-//             // Hide the input on larger screens
-//             searchInput.style.display = 'none';
-//         }
+        } else {
+            // Hide the input on larger screens
+            searchInput.style.display = 'none';
+        }
 
-//         // Always show the search icon
-//         searchIcon.style.display = 'inline-block';
-//     }, 2000); // Add a slight delay to allow interaction with results
-// });
+        // Always show the search icon
+        searchIcon.style.display = 'inline-block';
+    }, 200); // Add a slight delay to allow interaction with results
+});
 
 
   searchInput.addEventListener('input', () => {
