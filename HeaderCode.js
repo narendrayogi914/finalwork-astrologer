@@ -349,8 +349,9 @@ function searchbarsection() {
           searchResults.style.flexDirection = 'column';
           li.style.cursor = 'pointer';
           li.style.display = 'flex';
+          li.style.width='100%'
           li.style.justifyContent = 'space-between';
-          li.style.padding = '2px%'
+          // li.style.padding = '2px'
       });
   }
 
@@ -372,22 +373,22 @@ function searchbarsection() {
     });
   });
 
-// searchInput.addEventListener('blur', (event) => {
+searchInput.addEventListener('blur', (event) => {
 
 
 
-//     setTimeout(() => {
-//         // Clear search results and reset input value
-//         searchResults.innerHTML = '';
-//         searchInput.value = '';
-//             // Hide the input on larger screens
-//             searchInput.style.display = 'none';
+    setTimeout(() => {
+        // Clear search results and reset input value
+        searchResults.innerHTML = '';
+        searchInput.value = '';
+            // Hide the input on larger screens
+            searchInput.style.display = 'none';
         
 
-//         // Always show the search icon
-//         searchIcon.style.display = 'inline-block';
-//     }, 200); // Add a slight delay to allow interaction with results
-// });
+        // Always show the search icon
+        searchIcon.style.display = 'inline-block';
+    }, 200); // Add a slight delay to allow interaction with results
+});
 
    
 window.addEventListener('resize', () => {
