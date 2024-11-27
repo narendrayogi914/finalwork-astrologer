@@ -344,12 +344,13 @@ function searchbarsection() {
       });
   }
 
-  searchInput.addEventListener('focus', () => {
-    if (!searchInput.classList.contains('focused')) {
-        searchInput.classList.add('focused');
-        searchInput.style.display = 'block';
-        ShowSomeDefaultItem();
-    }
+  
+searchInput.addEventListener('focus', () => {
+  isFocused = true;
+  searchInput.style.display = 'block'; // Ensure input stays visible
+  searchIcon.style.display = 'none'; // Hide icon
+  ShowSomeDefaultItem(); // Show default items
+  document.querySelector('#searchResults').style.display = 'block'; // Keep results visible
 });
 
 

@@ -51,9 +51,6 @@ a{
 
 
 #searchInput {
-    display: block; /* Avoid 'none' to maintain input visibility */
-    /* width: 100%; */
-    transition: width 0.3s ease;
     border-radius: 5px;
     padding: 5px;
     border: navajowhite;
